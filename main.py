@@ -29,14 +29,14 @@ label_map = {
 }
 
 recommendation_map = {
-    'Anthracnose': 'Gunakan fungisida berbahan aktif tembaga dan tambahkan pupuk AB1.',
-    'Bacterial Canker': 'Potong bagian yang terinfeksi dan gunakan bakterisida alami.',
-    'Cutting Weevil': 'Gunakan insektisida kontak dan periksa kebersihan lingkungan sekitar tanaman.',
-    'Die Back': 'Lakukan pemangkasan daun mati dan beri pupuk tinggi kalium.',
-    'Gall Midge': 'Semprotkan insektisida sistemik dan kontrol kelembaban tanah.',
+    'Anthracnose': 'Gunakan fungisida berbahan aktif (mankozeb, tembaga hidroksida, atau propineb) sesuai dosis anjuran.',
+    'Bacterial Canker': 'Potong bagian yang terinfeksi dan gunakan bakterisida berbahan tembaga (copper-based).',
+    'Cutting Weevil': 'Gunakan insektisida berbahan aktif (imidakloprid, lambda-cyhalothrin) dan periksa kebersihan lingkungan sekitar tanaman.',
+    'Die Back': 'Lakukan pemangkasan daun mati dan semprotkan fungisida sistemik (benomil, karbendazim, tebuconazole).',
+    'Gall Midge': 'Pangkas dan bakar daun/bunga yang terinfestasi dan aplikasikan insektisida sistematik (imidakloprid, abamektin, spinosad).',
     'Healthy': 'Tanaman sehat! Lanjutkan pemupukan dan penyiraman rutin.',
-    'Powdery Mildew': 'Semprot dengan larutan belerang atau fungisida sistemik.',
-    'Sooty Mould': 'Hilangkan sumber kutu putih dan cuci daun dengan sabun hortikultura.'
+    'Powdery Mildew': 'Semprot dengan fungisida sistemik dan preventif (karathane, hexaconazole, sulfur, miklobutanil).',
+    'Sooty Mould': 'Pangkas ranting yang terlalu rimbun dan semprot air sabun ringan atau campuran air + fungisida ringan.'
 }
 
 def extract_features(image_path):
