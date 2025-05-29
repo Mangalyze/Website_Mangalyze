@@ -14,7 +14,7 @@ Proyek ini bertujuan untuk mengembangkan Mango Leaf Analyze (MANGALYZE), sebuah 
 
 ```
 # 1. Salin Repository dari GitHub
-git clone https://github.com/fabasassa-lab/Capstone_Mangalyze.git
+git clone https://github.com/Mangalyze/Website_Mangalyze.git
 
 # 2. Pindah ke Folder Proyek
 cd nama-repository
