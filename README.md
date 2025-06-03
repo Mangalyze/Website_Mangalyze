@@ -23,7 +23,7 @@ cd nama-repository
 ```
 conda create --name main-ds python=3.10
 conda activate main-ds
-pip install flask keras tensorflow
+pip install flask keras tensorflow flask-cors pillow
 ```
 
 ### Run main.py
