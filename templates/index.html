@@ -151,13 +151,17 @@
         background-color: #e8f5e9;
         padding: 40px 0;
       }
+
+      .navbar-nav .nav-link.active {
+        font-weight: bold;
+        color: #178011 !important;
+      }
     </style>
   </head>
-  <body>
+<body data-bs-spy="scroll" data-bs-target="#navbarContent" data-bs-offset="70" tabindex="0">
+
     <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
-    >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#">Mangalyze<span>.</span></a>
         <button
@@ -216,7 +220,8 @@
               <i class="bi bi-bug-fill"></i>
               <h5 class="card-title">Anthracnose</h5>
               <p class="card-text">
-                Penyakit jamur (<b>Colletotrichum gloeosporioides</b>) yang ditandai dengan munculnya bercak-bercak coklat tua hingga hitam.
+                Penyakit jamur (<b>Colletotrichum gloeosporioides</b>) yang
+                ditandai dengan munculnya bercak-bercak coklat tua hingga hitam.
               </p>
             </div>
           </div>
@@ -228,8 +233,9 @@
               <i class="bi bi-droplet-fill"></i>
               <h5 class="card-title">Bacterial Canker</h5>
               <p class="card-text">
-                Penyakit berbasis bakteri yang ditandai dengan munculnya bercak nekrotik (mati) berair atau 
-                kering pada daun, biasanya dikelilingi oleh tepi kuning.
+                Penyakit berbasis bakteri yang ditandai dengan munculnya bercak
+                nekrotik (mati) berair atau kering pada daun, biasanya
+                dikelilingi oleh tepi kuning.
               </p>
             </div>
           </div>
@@ -241,8 +247,9 @@
               <i class="bi bi-tree-fill"></i>
               <h5 class="card-title">Die Back</h5>
               <p class="card-text">
-                Penyakit jamur yang menyebabkan kematian jaringan tanaman dimulai dari 
-                ujung (pucuk) ranting atau cabang, yang kemudian menyebar ke arah batang utama.
+                Penyakit jamur yang menyebabkan kematian jaringan tanaman
+                dimulai dari ujung (pucuk) ranting atau cabang, yang kemudian
+                menyebar ke arah batang utama.
               </p>
             </div>
           </div>
@@ -254,7 +261,8 @@
               <i class="bi bi-bug"></i>
               <h5 class="card-title">Gall Midge</h5>
               <p class="card-text">
-                Serangan hama yang menyebabkan terbentuknya "gall" (bengkokan atau benjolan abnormal) pada daun atau jaringan tanaman lainnya.
+                Serangan hama yang menyebabkan terbentuknya "gall" (bengkokan
+                atau benjolan abnormal) pada daun atau jaringan tanaman lainnya.
               </p>
             </div>
           </div>
@@ -266,8 +274,8 @@
               <i class="bi bi-cloud-fog2-fill"></i>
               <h5 class="card-title">Powdery Mildew</h5>
               <p class="card-text">
-                Penyakit jamur (<b>Oidium mangiferae</b>) yang ditandai dengan munculnya lapisan 
-                putih seperti tepung pada permukaan daun.
+                Penyakit jamur (<b>Oidium mangiferae</b>) yang ditandai dengan
+                munculnya lapisan putih seperti tepung pada permukaan daun.
               </p>
             </div>
           </div>
@@ -279,8 +287,9 @@
               <i class="bi bi-bug-fill"></i>
               <h5 class="card-title">Cutting Weevil</h5>
               <p class="card-text">
-                Serangan hama dari kelompok kumbang kecil yang menyerang tunas muda, 
-                tangkai bunga, dan cabang kecil dengan cara memotong atau menggigit pangkal jaringan.
+                Serangan hama dari kelompok kumbang kecil yang menyerang tunas
+                muda, tangkai bunga, dan cabang kecil dengan cara memotong atau
+                menggigit pangkal jaringan.
               </p>
             </div>
           </div>
@@ -292,7 +301,8 @@
               <i class="bi bi-journal-medical"></i>
               <h5 class="card-title">Sooty Mould</h5>
               <p class="card-text">
-                Penyakit jamur yang menyebabkan lapisan berwarna hitam pekat seperti arang atau jelaga muncul di permukaan daun.
+                Penyakit jamur yang menyebabkan lapisan berwarna hitam pekat
+                seperti arang atau jelaga muncul di permukaan daun.
               </p>
             </div>
           </div>
@@ -308,8 +318,12 @@
         <!-- Form Upload -->
         <div class="col-lg-5">
           <div class="card shadow-sm p-4">
-            <form id="detectionForm" method="POST" action="/" enctype="multipart/form-data">
-
+            <form
+              id="detectionForm"
+              method="POST"
+              action="/"
+              enctype="multipart/form-data"
+            >
               <div class="mb-3">
                 <label for="imageUpload" class="form-label fw-semibold"
                   >Unggah Gambar Daun Mangga</label
@@ -403,7 +417,7 @@
               <div
                 id="emptyResult"
                 class="alert alert-warning mt-4"
-                style="display: none;"
+                style="display: none"
                 role="alert"
               >
                 Tidak ada hasil yang dapat ditampilkan.
@@ -424,9 +438,7 @@
 
     <!-- Footer -->
     <footer class="text-center py-4 bg-light mt-5">
-      <p class="mb-0">
-        &copy; 2025 Mangalyze. Dibuat oleh Tim Mangalyze.
-      </p>
+      <p class="mb-0">&copy; 2025 Mangalyze. Dibuat oleh Tim Mangalyze.</p>
     </footer>
 
     <!-- Bootstrap JS & dependencies -->
@@ -512,6 +524,28 @@
           emptyResult.style.display = "block";
           alert("Terjadi kesalahan: " + error.message);
         }
+      });
+      
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        window.addEventListener("scroll", () => {
+          let current = "";
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 100;
+            if (pageYOffset >= sectionTop) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+              link.classList.add("active");
+            }
+          });
+        });
       });
     </script>
   </body>
