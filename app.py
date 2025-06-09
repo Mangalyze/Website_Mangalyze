@@ -21,6 +21,8 @@ def download_and_load_model():
     model = load_model(output)
     return model
 
+model = download_and_load_model()
+
 # Label and recommendation maps
 label_map = {
     0: 'Anthracnose',
