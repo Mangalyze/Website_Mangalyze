@@ -13,7 +13,7 @@ from tensorflow.keras.applications.densenet import preprocess_input
 st.set_page_config(page_title="MANGALYZE - Analisis Daun Mangga", layout="wide", page_icon="🥭")
 
 # Load model
-url = 'https://drive.google.com/uc?export=download&id=1GHH3x1ALwSCJ5Skmncubx2wX3E8o7A92'
+url = 'https://drive.google.com/uc?export=download&id=1Pj1oGsO5pYydWO93rlPPy-6JWEPdf2Ph'
 output = 'densenet201.keras'
 gdown.download(url, output, quiet=False)
 model = load_model(output)
