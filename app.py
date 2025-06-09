@@ -14,10 +14,12 @@ st.set_page_config(page_title="MANGALYZE - Analisis Daun Mangga", layout="wide",
 
 # Load model
 @st.cache_resource(show_spinner="Loading model...")
-url = 'https://drive.google.com/uc?export=download&id=1Pj1oGsO5pYydWO93rlPPy-6JWEPdf2Ph'
-output = 'densenet201.keras'
-gdown.download(url, output, quiet=False)
-model = load_model(output)
+def download_and_load_model():
+    url = 'https://drive.google.com/uc?export=download&id=1Pj1oGsO5pYydWO93rlPPy-6JWEPdf2Ph'
+    output = 'densenet201.keras'
+    gdown.download(url, output, quiet=False)
+    model = load_model(output)
+    return model
 
 # Label and recommendation maps
 label_map = {
