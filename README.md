@@ -9,6 +9,13 @@ Proyek ini bertujuan untuk mengembangkan Mango Leaf Analyze (MANGALYZE), sebuah 
 3. A673XBF392 – Permata Ayu Rahmawati – Universitas Bhayangkara Surabaya
 4. A308YBF407 – Rahmad Ramadhan Laska – Universitas Riau
 
+---
+
+## Website Mangalyze
+
+Silahkan mencoba website kami melalui [Website Mangalyze](https://mangalyze.streamlit.app/)
+
+---
 
 ### Setup Environment
 
